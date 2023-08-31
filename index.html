@@ -23,7 +23,7 @@
           const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
   
           days_left = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds left`
-          div.innerHTML(days_left)
+          div.textContent(days_left)
       }
   }, 1000);
 </script>
