@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>Countdown Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {            
+        body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: black;
@@ -12,10 +13,10 @@
         }
 
         #countdown {
-            font-size: 28px;
-            color: #3498db; /* Set your desired font color here */
-            margin-top: 50px;
-            animation: pulse 2s ease-in-out infinite; /* Add a constant pulse animation */
+            font-size: 24px;
+            color: #3498db;
+            margin-top: 30px;
+            animation: pulse 2s ease-in-out infinite;
         }
 
         @keyframes pulse {
@@ -24,6 +25,12 @@
             }
             50% {
                 transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            #countdown {
+                font-size: 20px;
             }
         }
     </style>
