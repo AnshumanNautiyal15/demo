@@ -1,1 +1,29 @@
-
+<html>
+  <div id="timeleft">
+    
+  </div>
+</html>
+<script>
+  var div=document.getElementById('timeleft')
+  // Set the target date for the countdown
+  const targetDate = new Date('2023-10-21T18:00:00');
+  
+  // Update the countdown every second
+  const countdown = setInterval(() => {
+      const currentDate = new Date();
+      const timeDifference = targetDate - currentDate;
+  
+      if (timeDifference <= 0) {
+          clearInterval(countdown);
+          console.log('Countdown has ended!');
+      } else {
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+  
+          days_left = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds left`
+          div.innerHTML(days_left)
+      }
+  }, 1000);
+</script>
