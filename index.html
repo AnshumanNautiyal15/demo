@@ -12,18 +12,18 @@
         }
 
         #countdown {
-            font-size: 24px;
-            color: #333;
+            font-size: 28px;
+            color: #3498db; /* Set your desired font color here */
             margin-top: 50px;
-            animation: fadeIn 1s ease-in-out;
+            animation: pulse 2s ease-in-out infinite; /* Add a constant pulse animation */
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
             }
-            to {
-                opacity: 1;
+            50% {
+                transform: scale(1.1);
             }
         }
     </style>
